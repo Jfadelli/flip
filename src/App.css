@@ -1,16 +1,40 @@
 .App {
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flip-button {
+  margin: 0 0 40px 0; 
+  font-size:20px;
+  border: 0px solid #282c34;
+  border-radius: 20px;
+  padding: 10px 20px ;
+  color: white;
+  background-color: rgb(20, 66, 126);
+  font-variant: small-caps;
+  align-self: center;
+  box-shadow: -3px 2px 45px 5px rgba(20, 66, 126, .4)
+  
+}
+
+.title{
+  font-variant: small-caps;
+  margin: 0 0 40px;
+}
+
+.title-div{
+  display: flex;
+
 }
 
 .App-header {
@@ -24,15 +48,35 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.coin-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 25vw
 }
 
-@keyframes App-logo-spin {
+.coin {
+  display: 'flex'
+}
+
+
+.heads-fade-in{
+	animation: heads-fade-in 2s;
+  	opacity: 1;
+}
+
+@keyframes heads-fade-in {
   from {
-    transform: rotate(0deg);
+  	opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+.tails-fade-in{
+	animation: tails-fade-in 2s;
+  	opacity: 1;
+}
+
+@keyframes tails-fade-in {
+  from {
+  	opacity: 0;
   }
 }
